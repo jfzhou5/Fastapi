@@ -19,9 +19,4 @@ app.include_router(
     responses={404: {"description": "Not found"}},
 )
 
-<<<<<<< HEAD
-# master
-=======
 
-
->>>>>>> feature1
