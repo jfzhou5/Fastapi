@@ -3,7 +3,7 @@ python-multipart
 接受的是表单数据而不是json数据
 """
 
-from fastapi import FastAPI, Form, File, UploadFile
+from fastapi import FastAPI, Form, File
 
 app = FastAPI()
 

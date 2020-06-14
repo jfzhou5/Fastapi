@@ -7,5 +7,17 @@
            author datetime(DESC) summary
 """
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    age: int
+    desc: str = '个人描述'
+
+
+@app.post('/items/', )
+async def create_item(item: Item = None):
+    return {"data": item.dict()}

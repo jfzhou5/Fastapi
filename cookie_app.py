@@ -6,6 +6,15 @@
 @Log     :
            author datetime(DESC) summary
 """
-from fastapi import FastAPI
+from typing import List
+
+from fastapi import FastAPI, Cookie, Body
 
 app = FastAPI()
+
+
+@app.post('/cookie/')
+async def get_cookie(
+        name: List[str] = Body(...)
+):
+    return {'name': name}
